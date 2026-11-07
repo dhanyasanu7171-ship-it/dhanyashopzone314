@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ShopZone - Discover amazing products at great prices.">
+    <title>ShopZone | Online Shopping</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+
+            <a href="#" class="logo">
+                <i class="fa-solid fa-bag-shopping"></i>
+                Shop<span>Zone</span>
+            </a>
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search for products..."
+                    aria-label="Search products"
+                >
+                <button id="searchButton" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <button class="cart-button" id="cartButton" aria-label="Open shopping cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Cart</span>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-tag">THE BIGGEST SALE OF THE SEASON</span>
+
+            <h1>Discover Your<br>Next Favorite Thing.</h1>
+
+            <p>
+                Explore premium products, amazing deals, and
+                everyday essentials at unbeatable prices.
+            </p>
+
+            <a href="#products" class="hero-button">
+                Shop Now <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <div class="hero-features">
+                <span><i class="fa-solid fa-truck-fast"></i> Free Shipping</span>
+                <span><i class="fa-solid fa-shield-halved"></i> Secure Shopping</span>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img
+                src="https://images.unsplash.com/photo-1607082349566-187342175e2f?w=900&auto=format&fit=crop&q=85"
+                alt="Shopping bags and colorful shopping products"
+            >
+            <div class="sale-badge">
+                <strong>30%</strong>
+                <span>OFF</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <main class="products-section" id="products">
+
+        <div class="section-heading">
+            <div>
+                <span class="section-subtitle">OUR COLLECTION</span>
+                <h2>Featured Products</h2>
+                <p>Find something you'll love.</p>
+            </div>
+
+            <div class="product-total" id="productTotal">
+                8 Products
+            </div>
+        </div>
+
+        <!-- Products are loaded dynamically using JavaScript -->
+        <div class="product-grid" id="productGrid">
+            <div class="loading-message">
+                <i class="fa-solid fa-spinner fa-spin"></i>
+                Loading amazing products...
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-sidebar" id="cartSidebar" aria-label="Shopping cart">
+
+        <div class="cart-header">
+            <h2><i class="fa-solid fa-bag-shopping"></i> Your Cart</h2>
+            <button id="closeCart" class="close-cart" aria-label="Close cart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <h3>Your cart is empty!</h3>
+                <p>Start adding your favorite products.</p>
+            </div>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total Amount:</span>
+                <strong id="cartTotal">₹0</strong>
+            </div>
+
+            <button class="checkout-button" id="checkoutButton">
+                Proceed to Checkout
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+
+    </aside>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMessage">Product added to cart!</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="#" class="footer-logo">
+            <i class="fa-solid fa-bag-shopping"></i> ShopZone
+        </a>
+
+        <p>Your one-stop destination for everything you love.</p>
+
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+
+        <p class="copyright">
+            &copy; 2026 ShopZone. All rights reserved.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
